@@ -36,7 +36,6 @@ namespace advent2018
                         fabric[horizontalLocation, v] = id;
                         }
                         else{
-                            counter++;
                             fabric[horizontalLocation, v] = "x";
 
                         }
@@ -44,6 +43,16 @@ namespace advent2018
                    }
                    horizontalLocation++;  
                }
+            }
+
+            for (int i = 0; i < rowLength; i++)
+            {
+                for (int j = 0; j < colLength; j++)
+                {
+                    if(fabric[i, j] == "x"){
+                        counter++;
+                    }
+                }
             }
           Console.Write(counter);
         }
