@@ -6,7 +6,7 @@ namespace advent2018
     {
         static void Main(string[] args)
         {
-            two_one.TaskTwo();
+            three_one.TaskThree();
         }
     }
 }
