@@ -6,7 +6,7 @@ namespace advent2018
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!2");
+            one_one.TaskOne();
         }
     }
 }
