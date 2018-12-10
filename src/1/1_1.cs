@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Linq;
 
 namespace advent2018
 {
@@ -6,24 +8,13 @@ namespace advent2018
     {
         public static void TaskOne(){
             // Tor 1 Task 1
-            string[] frequency = System.IO.File.ReadAllLines(@"src\1\1_1_file.txt");
+            var frequencies = File.ReadAllLines(@"src\1\1_1_file.txt").Select(o => Int32.Parse(o));
             int total = 0;
-            int solution = 0;
             
-            for(int i=0; i<frequency.Length; i++){
-               string operation = frequency[i].Substring(0, 1);
-               total = Int32.Parse(frequency[i].Substring(1));
-                
-                switch(operation){
-                    case "+":
-                        solution = solution + total;
-                    break;
-                    case "-":
-                        solution = solution - total;
-                    break;
-                }
-            }
-            Console.WriteLine(solution);
+           foreach(int f in frequencies){
+               total += f;
+           }
+            Console.WriteLine(total);
         }
     }
 }
